@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ce09688b567ca4482d047f175ea0a7, type: 3}
+  m_Name: Big_Cats
+  m_EditorClassIdentifier: 
+  title: Big Cats
+  description: From tiny predators to the largest of the Cat Family, these beasts
+    roam the plains and capture our hearts.
+  animals: 'Animals in this exhibit: Lions, Tigers, Cheetahs, oh my!'
+  animalImage: {fileID: 21300000, guid: d8113462a844baa4f847dbfbc9bce42d, type: 3}

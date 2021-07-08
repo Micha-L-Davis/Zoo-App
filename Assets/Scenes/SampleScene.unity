@@ -232,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460.42, y: -266}
-  m_SizeDelta: {x: 615.16, y: 180.86}
+  m_AnchoredPosition: {x: -475.88928, y: -190}
+  m_SizeDelta: {x: 633.3814, y: 180.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70815557
 MonoBehaviour:
@@ -441,7 +441,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 512248687}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -518,7 +518,7 @@ RectTransform:
   m_Children:
   - {fileID: 1539000512}
   m_Father: {fileID: 512248687}
-  m_RootOrder: 16
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -568,7 +568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 214776154}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512248689}
+        m_TargetAssemblyTypeName: MapPanel, Assembly-CSharp
+        m_MethodName: SelectExhibit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 49a996cd01be7f4468c98286eeb04b99, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &214776154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +649,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 512248687}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -826,6 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512248687}
   - component: {fileID: 512248688}
+  - component: {fileID: 512248689}
   m_Layer: 5
   m_Name: Map_Panel
   m_TagString: Untagged
@@ -856,11 +869,11 @@ RectTransform:
   - {fileID: 552542031}
   - {fileID: 1710774019}
   - {fileID: 1193046075}
+  - {fileID: 214776152}
   - {fileID: 2107428228}
   - {fileID: 204151600}
   - {fileID: 2000977627}
   - {fileID: 439928468}
-  - {fileID: 214776152}
   - {fileID: 923395182}
   m_Father: {fileID: 1058974813}
   m_RootOrder: 2
@@ -878,6 +891,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512248686}
   m_CullTransparentMesh: 1
+--- !u!114 &512248689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512248686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17661998e03cb8046ae5e933fd821376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPanel: {fileID: 588826220}
 --- !u!1 &512423782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 552542033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512248689}
+        m_TargetAssemblyTypeName: MapPanel, Assembly-CSharp
+        m_MethodName: SelectExhibit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: e435b30c22d770540b591dd986e548b7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &552542033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,13 +1421,14 @@ GameObject:
   m_Component:
   - component: {fileID: 588826221}
   - component: {fileID: 588826222}
+  - component: {fileID: 588826223}
   m_Layer: 5
   m_Name: Exhibit_Card_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &588826221
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1424,6 +1463,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588826220}
   m_CullTransparentMesh: 1
+--- !u!114 &588826223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588826220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912b8600a3e7b21499be7d2ec9fec38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 2144133298}
+  descriptionText: {fileID: 983233153}
+  animalsText: {fileID: 70815557}
+  animalImage: {fileID: 530019823}
 --- !u!1 &601096788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,7 +2054,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 686473452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512248689}
+        m_TargetAssemblyTypeName: MapPanel, Assembly-CSharp
+        m_MethodName: SelectExhibit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 1f2a8584f5bb6a844ab895e0f5f5e2a8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &686473452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2191,7 +2258,7 @@ GameObject:
   - component: {fileID: 923395184}
   - component: {fileID: 923395183}
   m_Layer: 5
-  m_Name: Entrance
+  m_Name: EntranceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2347,8 +2414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460.42, y: 19.8211}
-  m_SizeDelta: {x: 615.16, y: 351.3578}
+  m_AnchoredPosition: {x: -475.88928, y: 95.82108}
+  m_SizeDelta: {x: 633.3814, y: 351.3578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983233153
 MonoBehaviour:
@@ -2836,7 +2903,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1193046077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512248689}
+        m_TargetAssemblyTypeName: MapPanel, Assembly-CSharp
+        m_MethodName: SelectExhibit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 13ac9a28b62a5b845b0e47a5dd4dc295, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1193046077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3433,7 +3512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343938408}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 588826220}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1343938408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3629,7 +3720,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1368252260}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512248689}
+        m_TargetAssemblyTypeName: MapPanel, Assembly-CSharp
+        m_MethodName: SelectExhibit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 0a6138b9f2c23af419c796eee103a3d8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1368252260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4016,7 +4119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1710774021}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512248689}
+        m_TargetAssemblyTypeName: MapPanel, Assembly-CSharp
+        m_MethodName: SelectExhibit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cb12e915ac8a0ea449a3bf8b3642fd94, type: 2}
+          m_ObjectArgumentAssemblyTypeName: CardModel, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1710774021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4311,7 +4426,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 512248687}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4461,7 +4576,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 512248687}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4540,8 +4655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460.42, y: 296.86}
-  m_SizeDelta: {x: 615.16, y: 118.44}
+  m_AnchoredPosition: {x: -475.88928, y: 372.86}
+  m_SizeDelta: {x: 633.3814, y: 118.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144133298
 MonoBehaviour:
