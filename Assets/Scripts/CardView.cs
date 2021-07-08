@@ -15,8 +15,6 @@ public class CardView : MonoBehaviour
         MapPanel.OnSelectExhibit += FillCardData;
     }
 
-
-
     public void FillCardData(CardModel card)
     {
         this.titleText.text = card.title;
